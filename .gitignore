@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+.env
+
+# 민감한 키/파일
+your-service-account-key.json
+
+# 기타
+.DS_Store
+*.log
+
