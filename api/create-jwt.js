@@ -1,4 +1,14 @@
+import jwt from 'jsonwebtoken';
+
 export default function handler(req, res) {
-  res.status(200).json({ message: "JWT 생성 준비 완료" });
+  const secret = process.env.JWT_SECRET;
+
+  if (!secret) {
+    return res.status(500).json({ error: 'JWT secret not configured' });
+  }
+
+  const token = jwt.sign({ user: 'example' }, secret, { expiresIn: '1h' });
+
+  res.status(200).json({ token });
 }
 

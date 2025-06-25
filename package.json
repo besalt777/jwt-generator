@@ -1,0 +1,23 @@
+{
+  "name": "jwt-generator",
+  "version": "1.0.0",
+  "description": "JWT 생성기를 위한 간단한 Vercel 프로젝트입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besalt777/jwt-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/besalt777/jwt-generator/issues"
+  },
+  "homepage": "https://github.com/besalt777/jwt-generator#readme",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
