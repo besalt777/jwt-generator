@@ -7,7 +7,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: 'JWT secret not configured' });
   }
 
-  const token = jwt.sign({ user: 'example' }, secret, { expiresIn: '1h' });
+  const { user, role } = req.body;
+
+  if (!user || !role) {
+    return res.status(400).json({ error: 'user and role are required' });
+  }
+
+  const token = jwt.sign({ user, role }, secret, { expiresIn: '1h' });
 
   res.status(200).json({ token });
 }
